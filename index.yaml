@@ -16,4 +16,15 @@ entries:
     urls:
     - https://github.com/Laflash/charts/releases/download/example-v2-0.2.5/example-v2-0.2.5.tgz
     version: 0.2.5
+  gateway-server:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-09-14T18:08:05.729161857Z"
+    description: A Helm chart for Kubernetes
+    digest: 58753ae9addf2993d5509aec2d6e7ccb2b42447780675b0d242b3c834b664848
+    name: gateway-server
+    type: application
+    urls:
+    - https://github.com/Laflash/charts/releases/download/gateway-server-0.1.0/gateway-server-0.1.0.tgz
+    version: 0.1.0
 generated: "2020-09-14T17:48:18.85738672Z"
