@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  dockerconfig:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-09-14T22:24:57.217501219Z"
+    description: A Helm chart for Kubernetes
+    digest: e00b58b146012c4b9315288416be992232df3dc5445bee8ddadad7e0ee87593d
+    name: dockerconfig
+    type: application
+    urls:
+    - https://github.com/Laflash/charts/releases/download/dockerconfig-0.1.0/dockerconfig-0.1.0.tgz
+    version: 0.1.0
   example-v2:
   - apiVersion: v2
     appVersion: "1.0"
