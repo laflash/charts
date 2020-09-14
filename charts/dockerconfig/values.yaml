@@ -1,0 +1,10 @@
+# Default values for dockerconfig.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+imageCredentials:
+  registry: docker.io/laflash
+  username: laflash
+  password: iAmJody1!@@@
+  email: jody@laflash.guru
