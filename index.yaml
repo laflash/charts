@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  api-failover:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-09-17T14:47:52.111964635Z"
+    description: A Helm chart for Kubernetes
+    digest: 7c4fbbb7f2154770b4a6839e6b39f4212c30d12b63ed6ece87478e5edcaf8265
+    name: api-failover
+    type: application
+    urls:
+    - https://github.com/Laflash/charts/releases/download/api-failover-0.1.0/api-failover-0.1.0.tgz
+    version: 0.1.0
   dockerconfig:
   - apiVersion: v2
     appVersion: 1.16.0
