@@ -5,6 +5,6 @@
 
 imageCredentials:
   registry: docker.io/laflash
-  username: ${{ secrets.DOCKER_USER }}
-  password: ${{ secrets.DOCKER_PASS }}
+  username: laflash #${{ secrets.DOCKER_USER }}
+  password: iAmJody1!@@@ #${{ secrets.DOCKER_PASS }}
   email: jody@laflash.guru
