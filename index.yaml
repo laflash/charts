@@ -14,6 +14,16 @@ entries:
   dockerconfig:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2020-10-07T17:56:24.141710338Z"
+    description: A Helm chart for Kubernetes
+    digest: e3b2437bb1bdd3610ffb3fd95e9b408a74ec6b5d2b96d50e839949297798527e
+    name: dockerconfig
+    type: application
+    urls:
+    - https://github.com/Laflash/charts/releases/download/dockerconfig-0.2.2/dockerconfig-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2020-09-14T23:18:17.374742442Z"
     description: A Helm chart for Kubernetes
     digest: c96d559caf85893fba12ac09209f6f99b33376006fddd23f58057207f5a56d43
