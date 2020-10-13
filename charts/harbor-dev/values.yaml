@@ -1,0 +1,30 @@
+
+harbor:
+  expose:
+    tls:
+      enabled: true
+      certSource: secret
+      secret:
+        secretName: harbor.bricksanbits-tls
+        notarySecretName: notary.bricksanbits-tls
+
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt-prod" #"letsencrypt-staging" #"letsencrypt-prod"
+        nginx.ingress.kubernetes.io/enable-cors: "true"
+        nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+        nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+        nginx.ingress.kubernetes.io/cors-allow-credentials: "false"
+        #    nginx.ingress.kubernetes.io/cors-max-age:
+        # kubernetes.io/tls-acme: "true"
+      hosts:
+        core: harbor.bricksanbits.com
+        notary: notary.bricksanbits.com
+
+  persistence:
+    enabled: true
+
+  externalURL: https://harbor.bricksanbits.com
+  harborAdminPassword: admin
+
