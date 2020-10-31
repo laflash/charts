@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: dockerrepokey
-type: kubernetes.io/dockerconfig
+  name: dockerregistrykey
+type: kubernetes.io/dockerconfigjson
 data:
   .dockerconfig: {{ template "imagePullSecret" . }}
