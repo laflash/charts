@@ -5,13 +5,14 @@ harbor:
       enabled: true
       certSource: secret
       secret:
-        secretName: harbor.bricksanbits-tls
-        notarySecretName: notary.bricksanbits-tls
+        secretName: harbor.laflash-dev-tls
+        notarySecretName: notary.laflash-dev-tls
 
     ingress:
       enabled: true
       annotations:
-        cert-manager.io/cluster-issuer: "letsencrypt-prod" #"letsencrypt-staging" #"letsencrypt-prod"
+        cert-manager.io/cluster-issuer: "letsencrypt-staging" #"letsencrypt-staging" #"letsencrypt-prod"
+        rancher.io/globalDNS: harbor.laflash-dev.com
         nginx.ingress.kubernetes.io/enable-cors: "true"
         nginx.ingress.kubernetes.io/cors-allow-origin: "*"
         nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
@@ -19,12 +20,57 @@ harbor:
         #    nginx.ingress.kubernetes.io/cors-max-age:
         # kubernetes.io/tls-acme: "true"
       hosts:
-        core: harbor.bricksanbits.com
-        notary: notary.bricksanbits.com
+        core: harbor.laflash-dev.com
+        notary: notary.laflash-dev.com
+
+  externalURL: https://harbor.laflash-dev.com
+  harborAdminPassword: admin
 
   persistence:
     enabled: true
-
-  externalURL: https://harbor.bricksanbits.com
-  harborAdminPassword: admin
-
+    persistentVolumeClaim:
+      registry:
+        # Use the existing PVC which must be created manually before bound,
+        # and specify the "subPath" if the PVC is shared with other components
+        existingClaim: ""
+        # Specify the "storageClass" used to provision the volume. Or the default
+        # StorageClass will be used(the default).
+        # Set it to "-" to disable dynamic provisioning
+        storageClass: longhorn
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 5Gi
+      chartmuseum:
+        existingClaim: ""
+        storageClass: longhorn
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 5Gi
+      jobservice:
+        existingClaim: ""
+        storageClass: longhorn
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 1Gi
+      # If external database is used, the following settings for database will
+      # be ignored
+      database:
+        existingClaim: ""
+        storageClass: longhorn
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 1Gi
+      # If external Redis is used, the following settings for Redis will
+      # be ignored
+      redis:
+        existingClaim: ""
+        storageClass: longhorn
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 1Gi
+      trivy:
+        existingClaim: ""
+        storageClass: longhorn
+        subPath: ""
+        accessMode: ReadWriteOnce
+        size: 5Gi
