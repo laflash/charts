@@ -82,6 +82,20 @@ entries:
   harbor-dev:
   - apiVersion: v2
     appVersion: 1.1.0
+    created: "2020-12-19T08:50:51.864591976Z"
+    dependencies:
+    - name: harbor
+      repository: https://helm.goharbor.io
+      version: 1.5.0
+    description: A Helm chart for Kubernetes
+    digest: 2707d0e50a513e9f1384df935e24b37643cfdd2ded843c84b98030ec6839c4b9
+    name: harbor-dev
+    type: application
+    urls:
+    - https://github.com/Laflash/charts/releases/download/harbor-dev-0.1.1/harbor-dev-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.1.0
     created: "2020-10-13T22:04:44.843063515Z"
     dependencies:
     - name: harbor
