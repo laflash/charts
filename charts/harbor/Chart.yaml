@@ -20,4 +20,4 @@ name: harbor
 sources:
 - https://github.com/goharbor/harbor
 - https://github.com/goharbor/harbor-helm
-version: 1.6.1
+version: 1.6.2
