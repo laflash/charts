@@ -648,6 +648,9 @@ database:
     # The initial superuser password for internal database
     password: "changeit"
     resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
       requests:
         memory: 256Mi
         cpu: 100m
