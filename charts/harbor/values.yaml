@@ -647,7 +647,7 @@ database:
       tag: v2.2.1
     # The initial superuser password for internal database
     password: "changeit"
-     resources:
+    resources:
       requests:
         memory: 256Mi
         cpu: 100m
