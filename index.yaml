@@ -79,6 +79,33 @@ entries:
     urls:
     - https://github.com/Laflash/charts/releases/download/gateway-server-0.1.0/gateway-server-0.1.0.tgz
     version: 0.1.0
+  harbor:
+  - apiVersion: v1
+    appVersion: 2.2.1
+    created: "2021-05-11T15:27:52.42499496Z"
+    description: An open source trusted cloud native registry that stores, signs,
+      and scans content
+    digest: 3eec1934e9f777fc6a79f4132cabd48586b2a6c005596d7e0462bca848fe5649
+    home: https://goharbor.io
+    icon: https://raw.githubusercontent.com/goharbor/website/master/static/img/logos/harbor-icon-color.png
+    keywords:
+    - docker
+    - registry
+    - harbor
+    maintainers:
+    - email: yinw@vmware.com
+      name: Wenkai Yin
+    - email: hweiwei@vmware.com
+      name: Weiwei He
+    - email: dengq@vmware.com
+      name: Qian Deng
+    name: harbor
+    sources:
+    - https://github.com/goharbor/harbor
+    - https://github.com/goharbor/harbor-helm
+    urls:
+    - https://github.com/Laflash/charts/releases/download/harbor-1.6.2/harbor-1.6.2.tgz
+    version: 1.6.2
   harbor-dev:
   - apiVersion: v2
     appVersion: 1.1.0
